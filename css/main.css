@@ -1,0 +1,120 @@
+/* DONE: Add styles for login form */
+/* DONE: Center the form on the page */
+/* TODO: Add responsive styles */
+
+
+
+/* a {
+    text-decoration: none;
+} */
+
+:root {
+    --blue:rgb(23, 162, 184);
+}
+
+@font-face {
+    font-family: regularFont;
+    src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+
+body{
+    background-color: #24353F;
+    font-family: regularFont;
+}
+
+.dark-bg{
+    background-color: #24353F;
+}
+
+.box-width {
+    width:57.5%!important;
+}
+
+.box-shadow{
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    
+}
+
+span {
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+h1{
+    color: var(--blue);
+    font-weight: 500;
+}
+
+
+
+
+.form-control.transparent {
+    background-color: transparent;    
+    border-color:rgba(255, 255, 255, 0.8) !important;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

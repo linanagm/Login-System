@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="images/add-user.png">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" >
+    <!-- bootstrap css -->
+     <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <!-- sign up css -->
+    <link rel="stylesheet" href="css/signup.css">
+
+</head>
+<body>
+    
+
+    <!-- sign up page -->
+    <div id="signUpForm"  class="d-flex align-items-center min-vh-100">
+        <div class="container-fluid text-center d-flex justify-content-center  p-5 ">
+        
+            <div class="m-auto p-5 box-shadow box-width" id="formGroup">
+                <h1 class="fw-bold">Smart Login System</h1>
+                
+                <!-- name input -->
+                <input id="Name" type="text" class="form-control transparent my-3 outline text-white " placeholder="Enter Your name" required>
+                <ul class="alert alert-primary invalid-feedback"> 
+                    <li>Name is required</li>
+                    <li>Minimum length is 2 & Maximum is 20</li>
+                </ul>
+
+                <!-- email input -->
+                <input id="signUpEmail" type="email" class="form-control transparent my-3 outline text-white " placeholder="Enter Your email" required>
+                <ul class="alert alert-primary invalid-feedback"> 
+                    <li>Email is required</li>
+                    <li>Invalid Email formate</li>
+                </ul>
+
+                <!-- password input -->
+                <input id="signUpPassword" type="password" class="form-control transparent my-3" placeholder="Enter Your password" required>
+                <ul class="alert alert-primary invalid-feedback"> 
+                    <li>Password is required</li>
+                    <li>Minimum  8 characters, at least one letter & one number</li>
+                </ul>
+
+                <!-- validation alerts -->
+                <span id="succeesAlert" class="text-success lead d-none">success</span>
+                <span id="invalidAlert" class="text-danger lead d-none">Invalid email or password</span>
+                <span id="alreadyExist" class="text-danger lead d-none" >email already exist</span>
+                <span id="allRequire" class="text-danger lead d-none">All inputs are required</span>
+                
+                <!-- sign up button -->
+                <button id="signUpBtn" class="btn btn-outline-info w-100 my-3">Sign Up</button>
+                
+                <p class="text-white">
+                    Already have an account?
+                    <a href="index.html" 
+                    class="text-white link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">
+                    Sign In
+                    </a>
+                </p>
+  
+            </div>
+        </div>
+    </div>
+
+    <!-- signup js file -->
+    <script src="js/signup.js"></script>
+</body>
+</html>

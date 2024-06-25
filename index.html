@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="images/user.png">
+
+
+    <!-- font awesome -->
+     <link rel="stylesheet" href="css/all.min.css" >
+
+    <!-- bootstrap css -->
+     <link rel="stylesheet" href="css/bootstrap.min.css" >
+
+     <!-- main css -->
+     <link rel="stylesheet" href="css/main.css" >
+
+</head>
+
+<body>
+    <!-- sign in page -->
+    <div id="loginForm"  class="d-flex align-items-center min-vh-100">
+        <div class="container-fluid text-center d-flex justify-content-center  p-5 ">
+        
+            <div class="m-auto p-5 box-shadow box-width" id="formGroup">
+                <h1 class="fw-bold">Smart Login System</h1>
+
+                <!-- email input -->
+                <input id="email" type="email" class="form-control transparent my-3 outline text-white " placeholder="Enter Your email" required>
+                
+                <!-- password input -->
+                <input id="password" type="password" class="form-control transparent my-3" placeholder="Enter Your password" required>
+                
+                <!-- valedation alerts -->
+                <span id="errorAlert" class="text-danger lead d-none">All inputs are required</span>
+                
+                <!-- sign in button -->
+                <button id="signInBtn" class="btn btn-outline-info w-100 my-3">Login</button>
+                
+
+                <p class="text-white">
+                    Don’t have an account?
+                    <a href="signup.html"  
+                    class="text-white link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">
+                        Sign Up
+                    </a>
+                </p>
+
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- main js -->
+     <script src="js/index.js"></script>
+</body>
+</html>
+
+
