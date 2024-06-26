@@ -9,7 +9,6 @@ let storedUsers = [];
 //get stored users data from localstorage if they are there
 if(localStorage.getItem('storedUsers') !== null){
     storedUsers = ( JSON.parse(localStorage.getItem('storedUsers')));
-//    console.log("stored users is array >> ", Array.isArray(storedUsers)); // This will correctly show 'true' if usersList is an array
 
 }
 
@@ -20,30 +19,34 @@ signInBtn.addEventListener('click', function() {
     let email = emailInput.value.trim();
     let password = passwordInput.value.trim();
     
-     if (email.length === 0 || password.length === 0) {
-         showError('All inputs are required');
-         return;
-     }
 
-     let user = storedUsers.find(user => user.email === email);
+    // check if email or password is empty
+    if(email.length === 0 || email.password === 0){
+        showError('All inputs are required');
+        return;
+    }
+
+    // check if user is found in stored users 
+    let userFound = false;
+    for (let i = 0; i< storedUsers.length ; i++){
+        
+         if(storedUsers[i].email === email && storedUsers[i].password === password){
+            let userName = storedUsers[i].name;
+            // store user name in session storage to use in home page
+            sessionStorage.setItem('userName' , userName);
+
+            //If email and password are correct, navigate to home page
+            window.location.href = './home.html';
+            return;
+        }
+        
+    }
+    // if user is not found show error massege
+    if(userFound = true){
+        showError('Email or password incorrect.');
+            return;
+    }
     
-     console.log(user.name)
-     
-     if (!user) {
-         showError('Email incorrect.');
-         console.log('error');
-         return;
-     }
-
-    if (user.password !== password) {
-         showError('Password incorrect.');
-         return;
-     }
-    let userName = user.name;
-    sessionStorage.setItem('userName' , userName);
-
-    //If email and password are correct, navigate to home page
-    window.location.href = './home.html';
 });
 
 
